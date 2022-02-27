@@ -1,12 +1,15 @@
 <?php
 
-class loginController extends controller {
+class loginController extends controller
+{
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
     }
 
-    public function index() {
+    public function index()
+    {
         $dados = array();
 
         if (isset($_POST['email']) && !empty($_POST['email'])) {
@@ -24,7 +27,8 @@ class loginController extends controller {
         $this->loadView('login', $dados);
     }
 
-    public function cadastro() {
+    public function cadastro()
+    {
         $dados = array('aviso' => '');
 
         if (isset($_POST['nome']) && !empty($_POST['nome'])) {
@@ -51,9 +55,9 @@ class loginController extends controller {
         $this->loadView('cadastro', $dados);
     }
 
-    public function sair() {
+    public function sair()
+    {
         unset($_SESSION['twlg']);
         header("Location: /clonetwitter");
     }
-
 }

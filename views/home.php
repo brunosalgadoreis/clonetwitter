@@ -1,7 +1,6 @@
-<!-- sidebar starts -->
 <div class="sidebar">
   <i class="fab fa-twitter"></i>
-  <div class="sidebarOption active">
+  <div class="sidebarOption">
     <span class="material-icons"> home </span>
     <a href="/clonetwitter">
       <h2>Home</h2>
@@ -10,7 +9,9 @@
 
   <div class="sidebarOption">
     <span class="material-icons"> perm_identity </span>
+    <a href="/clonetwitter/perfil">
     <h2>Profile</h2>
+    </a>
   </div>
 
   <div class="sidebarOption">
@@ -20,29 +21,27 @@
     </a>
   </div>
 </div>
-<!-- sidebar ends -->
 
-<!-- feed starts -->
 <div class="feed">
   <div class="feed__header">
     <h2>Home - <?php echo $viewData['nome']; ?></h2>
   </div>
 
-  <!-- tweetbox starts -->
   <div class="tweetBox">
     <form method="POST">
       <div class="tweetbox__input">
-        <img src="https://www.pikpng.com/pngl/b/80-805523_default-avatar-svg-png-icon-free-download-264157.png" alt="" />
+        <img src="assets/images/<?php echo $viewData['foto']; ?>" alt="" />
         <input type="text" placeholder="What's happening?" name="msg" />
       </div>
       <button class="tweetBox__tweetButton" type="submit">Tweet</button>
     </form>
   </div>
-  <!-- tweetbox ends -->
+
   <?php foreach ($feed as $item) : ?>
-    <!-- post starts -->
+
     <div class="post">
       <div class="post__avatar">
+        <!--<img src="assets/images/<?php //echo $item['foto']; ?>" alt="" />-->
         <img src="https://www.pikpng.com/pngl/b/80-805523_default-avatar-svg-png-icon-free-download-264157.png" alt="" />
       </div>
 
@@ -70,9 +69,7 @@
     </div>
   <?php endforeach; ?>
 </div>
-<!-- post ends -->
 
-<!-- widgets starts -->
 <div class="widgets">
   <div class="widgets__input">
     <span class="material-icons widgets__searchIcon"> search </span>
@@ -112,44 +109,3 @@
 
   </div>
 </div>
-<!-- widgets ends -->
-
-<!--<div class="feed">
-    <form method="POST">
-        <textarea class="textareapost" name="msg"></textarea><br/>
-        <input type="submit" value="Enviar"/>
-    </form>
-    
-    <?php foreach ($feed as $item) : ?>
-    <strong><?php echo $item['nome']; ?></strong> - <?php echo date('H:i', strtotime($item['data_post'])); ?>
-    <?php echo $item['mensagem']; ?>
-    <hr/>
-    <?php endforeach; ?>
-    
-</div>
-<div class="rightside">
-    <h4>Relacionamentos</h4>
-    <div class="rs_meio"><?php echo $qt_seguidores ?><br/>Seguidores</div>
-    <div class="rs_meio"><?php echo $qt_seguidos ?><br/>Seguindo</div>
-    <div style="clear:both"></div>
-
-    <h4>Sugestões de amigos</h4>
-    <table border="0" width="100%">
-        <tr>
-            <td width="80%"></td>
-            <td></td>
-        </tr>
-        <?php foreach ($sugestao as $usuario) : ?>
-            <tr>
-                <td><?php echo $usuario['nome']; ?></td>
-                <td>    
-                    <?php if ($usuario['seguido'] == '0') : ?>
-                        <a href="/clonetwitter/home/seguir/<?php echo $usuario['id']; ?>">Seguir</a>
-                    <?php else : ?>
-                        <a href="/clonetwitter/home/deixardeseguir/<?php echo $usuario['id']; ?>">Deixar de Seguir</a>
-                    <?php endif; ?>
-                </td>
-            </tr>
-        <?php endforeach; ?>
-    </table>
-</div> -->

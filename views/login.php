@@ -8,13 +8,7 @@
   <link rel="stylesheet" href="assets/css/login.css">
 </head>
 
-<body class="body">
-  <header class="container">
-    <div class="logo">
-      <img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png" alt="Logo do Twitter">
-    </div>
-  </header>
-
+<body>
   <main class="container">
     <h1>Entrar no Twitter</h1>
     <div class="container">
@@ -38,4 +32,5 @@
     </div>
   </main>
 </body>
+
 </html>

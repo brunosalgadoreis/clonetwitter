@@ -9,12 +9,6 @@
 </head>
 
 <body class="body">
-    <header class="container">
-        <div class="logo">
-            <img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png" alt="Logo do Twitter">
-        </div>
-    </header>
-
     <main class="container">
         <h1>Cadastre-se no Twitter</h1>
         <div class="container">
@@ -44,19 +38,3 @@
 </body>
 
 </html>
-
-<!-- <h2>Cadastro</h2>
-<form method="POST">
-    Nome:<br/>
-    <input type="text" name="nome" /><br/><br/>
-
-    E-mail:<br/>
-    <input type="email" name="email" /><br/><br/>
-
-    Senha:<br/>
-    <input type="password" name="senha" /><br/>
-
-    <input type="submit" value="Entrar"/>
-
-
-</form> -->

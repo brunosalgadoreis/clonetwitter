@@ -1,9 +1,7 @@
 <?php
 
-class homeController extends controller
+class perfilController extends controller
 {
-
-    //private $db;
 
     public function __construct()
     {
@@ -19,32 +17,37 @@ class homeController extends controller
     public function index()
     {
         $dados = array(
-            'nome' => ''
+            'nome' => '',
+            'email' => ''
         );
 
-        $p = new posts();
-        if (isset($_POST['msg']) && !empty($_POST['msg'])) {
-            $msg = addslashes($_POST['msg']);
+        if (isset($_FILES['foto']) && !empty($_FILES['foto'])) {
+            $arquivo = $_FILES['foto'];
+            if (isset($arquivo['tmp_name']) && empty($arquivo['tmp_name']) == false) {
 
-            $p->inserirPost($msg);
+                $nomedoarquivo = md5(time() . rand(0, 99)) . '.png';
+                move_uploaded_file($arquivo['tmp_name'], 'assets/images/' . $nomedoarquivo); //.$arquivo['name']);
+
+                $u = new usuarios($_SESSION['twlg']);
+                $u->inserirFoto($nomedoarquivo);
+
+            }
         }
-
 
         $u = new usuarios($_SESSION['twlg']);
         $dados['nome'] = $u->getNome();
+        $dados['email'] = $u->getEmail();
         $dados['foto'] = $u->getFoto();
+
         $dados['qt_seguidos'] = $u->countSeguidos();
         $dados['qt_seguidores'] = $u->countSeguidores();
 
         $dados['sugestao'] = $u->getUsuarios(5);
 
-        $lista = $u->getSeguidos();
-        $lista[] = $_SESSION['twlg'];
-        $dados['feed'] = $p->getFeed($lista, 10);
-
-
-        $this->loadTemplate('home', $dados);
+        $this->loadTemplate('perfil', $dados);
     }
+
+
 
     public function seguir($id)
     {

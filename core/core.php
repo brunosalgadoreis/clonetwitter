@@ -1,5 +1,5 @@
 <?php
-require_once 'core/controller.php';
+
 class Core
 {
 
@@ -39,5 +39,6 @@ class Core
         $c = new $currentController();
         call_user_func_array(array($c, $currentAction), $params);
         //$c->$currentAction();
+        require_once 'core/controller.php';
     }
 }
