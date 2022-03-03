@@ -41,8 +41,8 @@
 
     <div class="post">
       <div class="post__avatar">
-        <!--<img src="assets/images/<?php //echo $item['foto']; ?>" alt="" />-->
-        <img src="https://www.pikpng.com/pngl/b/80-805523_default-avatar-svg-png-icon-free-download-264157.png" alt="" />
+        <img src="assets/images/<?php echo $item['foto']; ?>" alt="" />
+        <!--<img src="https://www.pikpng.com/pngl/b/80-805523_default-avatar-svg-png-icon-free-download-264157.png" alt="" />-->
       </div>
 
       <div class="post__body">
@@ -71,7 +71,7 @@
 </div>
 
 <div class="widgets">
-  <div class="widgets__input">
+  <div class="t_input">
     <span class="material-icons widgets__searchIcon"> search </span>
     <input type="text" placeholder="Search Twitter" />
   </div>

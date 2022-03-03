@@ -213,7 +213,7 @@
     flex: 0.3;
   }
   
-  .widgets__input {
+  .t_input {
     display: flex;
     align-items: center;
     background-color: var(--twitter-background);
@@ -223,7 +223,7 @@
     margin-left: 20px;
   }
   
-  .widgets__input input {
+  .t_input input {
     border: none;
     background-color: var(--twitter-background);
   }
@@ -245,3 +245,67 @@
     font-weight: 800;
   }
 
+  .perfil {
+    flex: 0.5;
+    border-right: 1px solid var(--twitter-background);
+    min-width: fit-content;
+    overflow-y: scroll;
+  }
+  
+  .perfil__header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    border: 1px solid var(--twitter-background);
+    padding: 15px 20px;
+  }
+
+  .perfil::-webkit-scrollbar {
+    display: none;
+  }
+
+  .perfil {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .p_input {
+    display: flex;
+    align-items: center;
+    background-color: var(--twitter-background);
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .p_input input {
+    border: none;
+    background-color: var(--twitter-background);
+  }
+
+  .pButton {
+    background-color: var(--twitter-color);
+    border: none;
+    color: white;
+    font-weight: 900;
+  
+    border-radius: 30px;
+    width: 80px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+
+  .fotobox{
+    text-align: center;
+  }
+
+  .fotobox img {
+    padding: 10px;
+    border-radius: 50%;
+    height: 80px;
+    
+  }

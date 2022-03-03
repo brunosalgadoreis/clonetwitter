@@ -20,35 +20,33 @@
     </div>
 </div>
 
-<div class="feed">
-    <div class="feed__header">
+<div class="perfil">
+    <div class="perfil__header">
         <h2>Perfil - <?php echo $viewData['nome']; ?></h2>
     </div>
-    <div class="post">
-        <form method="POST">
-            <div class="widgets__input">
-                <input type="text" name="nome" value="<?php echo $viewData['nome']; ?>" />
-            </div>
-            <div class="widgets__input">
-                <input type="email" name="email" value="<?php echo $viewData['email']; ?>" />
-            </div>
-            <button class="tweetBox__tweetButton" type="submit">Salvar</button>
+    <form method="POST">
+        <div class="p_input">
+            <input type="text" name="nome" value="<?php echo $viewData['nome']; ?>" />
+        </div>
+        <div class="p_input">
+            <input type="email" name="email" value="<?php echo $viewData['email']; ?>" />
+        </div>
+        <button class="pButton" type="submit">Salvar</button>
 
-        </form>
-        <form method="POST" enctype="multipart/form-data">
-            <div class="widgets__input">
-                <input type="file" name="foto" />
-            </div>
-            <input class="tweetBox__tweetButton" type="submit" value="Upload">
-            <div class="tweetbox__input">
-            <img src="assets/images/<?php echo $viewData['foto']; ?>" alt="" />
-            </div>
-        </form>
+    </form>
+    <div class="fotobox">
+        <img src="assets/images/<?php echo $viewData['foto']; ?>" alt="" />
     </div>
+    <form method="POST" enctype="multipart/form-data">
+        <div class="p_input">
+            <input type="file" name="foto" />
+        </div>
+        <input class="pButton" type="submit" value="Upload">
+    </form>
 </div>
 
 <div class="widgets">
-    <div class="widgets__input">
+    <div class="t_input">
         <span class="material-icons widgets__searchIcon"> search </span>
         <input type="text" placeholder="Search Twitter" />
     </div>

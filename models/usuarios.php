@@ -46,6 +46,12 @@ class usuarios extends model
         return $id;
     }
 
+    public function atualizarUsuario($nome, $email)
+    {
+        $sql = "UPDATE usuarios SET nome = '$nome', email = '$email' WHERE id = '" . ($this->uid) . "'";
+        $this->db->query($sql);
+    }
+
     public function inserirFoto($foto)
     {
         $sql = "UPDATE usuarios SET foto = '$foto' WHERE id = '" . ($this->uid) . "'";

@@ -16,7 +16,7 @@ class posts extends model
         $array = array();
 
         if (count($lista) > 0) {
-            $sql = "SELECT *, (select nome from usuarios where usuarios.id = posts.id_usuario) as nome FROM posts WHERE id_usuario IN (" . implode(',', $lista) . ") ORDER BY data_post DESC LIMIT " . $limit;
+            $sql = "SELECT *, (select nome from usuarios where usuarios.id = posts.id_usuario) as nome, (SELECT foto from usuarios where usuarios.id = posts.id_usuario) as foto FROM posts WHERE id_usuario IN (" . implode(',', $lista) . ") ORDER BY data_post DESC LIMIT " . $limit;
 
             $sql = $this->db->query($sql);
 

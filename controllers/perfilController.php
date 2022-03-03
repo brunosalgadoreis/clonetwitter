@@ -23,6 +23,8 @@ class perfilController extends controller
 
         if (isset($_FILES['foto']) && !empty($_FILES['foto'])) {
             $arquivo = $_FILES['foto'];
+
+
             if (isset($arquivo['tmp_name']) && empty($arquivo['tmp_name']) == false) {
 
                 $nomedoarquivo = md5(time() . rand(0, 99)) . '.png';
@@ -33,6 +35,17 @@ class perfilController extends controller
 
             }
         }
+
+        if (isset($_POST['nome']) && !empty($_POST['nome'])) {
+
+            $nome = addslashes($_POST['nome']);
+            $email = addslashes($_POST['email']);
+
+            $u = new usuarios($_SESSION['twlg']);
+            $u->atualizarUsuario($nome, $email);
+        
+        }
+
 
         $u = new usuarios($_SESSION['twlg']);
         $dados['nome'] = $u->getNome();
