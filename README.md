@@ -4,9 +4,9 @@ Projeto Twitter Clone com PHP e Mysql.
 
 Criado durante o curso Do Zero ao Profissional, onde realizei alterações no layout e adicionei funcionalidades.
 
-* **Sistema Login/Signup**
+* **Sistema Login/Cadastro**
 
-* **Post/View Tweets**
+* **Postagem/Visualização**
 
 * **Follow/Unfollow usuários**
 
@@ -14,11 +14,9 @@ Criado durante o curso Do Zero ao Profissional, onde realizei alterações no la
 
 * **Feed** - Os usuários podem ver os tweets de outros usuários que seguem.
 
-* **Responsive Web Design** - With the help of Bootstrap the web can be easily accessed on any device.
-
 * **MVC**
 
-* **Edit Profiles** -Usuários podem editar seus dados do perfil (adicionaodo por mim).
+* **Editar Perfil** -Usuários podem editar seus dados do perfil (adicionaodo por mim).
 
 * **Image uoload** - Nusuários podem carregar fotos para seu perfil(adicionaodo por mim).
 
